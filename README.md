@@ -8,7 +8,7 @@
 https://public.tableau.com/authoring/AnnualOnboardingTrendsJanuaryPeakPerformance/Sheet1#1
 
  📁 **View Python Data Pipeline**
-(PASTE_YOUR_GITHUB_CODE_LINK_HERE)
+https://github.com/LajpeAAPC/Annual-CMS-Onboarding-Trends-January-Medical-Waste-Audit-Optimization/blob/main/scripts/data_cleaning_AnnualJanuaryWaste2026.py
 
 ⚠️ **The Business Challenge:** Healthcare networks nationwide face severe financial and operational strain from **wasted medical equipment and inventory stockouts**. Hospital administrators benefit from data driven insights into the **equipment supplier peaks that cause:**
 * **Higher risks of accidental inventory waste and expiration.** 
