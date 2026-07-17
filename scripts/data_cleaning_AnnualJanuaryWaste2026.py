@@ -51,5 +51,26 @@ data['participationbegindate'].isna().sum()
 np.int64(0)
 
 # O or no missing values. 
+
+# Use DuckDB to run high-performance SQL directly on the Pandas DataFrame
+import duckdb
+
+# SQL Query: Find top 5 states with the most providers, filtering for contracted ones
+sql_query = """
+    SELECT 
+        practicestate AS state, 
+        COUNT(provider_id) AS total_providers,
+        COUNT(CASE WHEN is_contracted_for_cba = TRUE THEN 1 END) AS contracted_providers
+    FROM data
+    GROUP BY state
+    ORDER BY total_providers DESC
+    LIMIT 5;
+"""
+
+# Run the SQL query directly on the 'data' DataFrame and view results
+sql_result = duckdb.query(sql_query).df()
+print("\n--- SQL Analysis: Top 5 States by Provider Count ---")
+print(sql_result)
+
 #Ready to export cleaned data to CSV or connect directly.
 data.to_csv('cleaned_participation_data.csv', index=False)
